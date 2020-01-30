@@ -1,2 +1,4 @@
-/pics
-/vids
+/temp
+/.vscode
+.prettierignore
+temp.html
