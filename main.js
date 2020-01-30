@@ -40,6 +40,6 @@ function toggleTestimonial() {
 	z++;
 }
 
-// setInterval(toggleTestimonial, interval);
+setInterval(toggleTestimonial, interval);
 
 // ------------ / -------------
