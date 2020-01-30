@@ -1,0 +1,72 @@
+.landing .bg {
+  height: 70vh;
+  background: #242424 url("https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-size: auto 100%;
+  background-position: 65% 0;
+  background-repeat: no-repeat;
+  margin-bottom: -150px;
+}
+
+@media all and (min-width: 600px) {
+  .landing .bg {
+    background-size: auto 70%;
+    background-attachment: fixed;
+    height: 100vh;
+    background-size: cover;
+    background-position: 65% 25%;
+    margin-bottom: 0;
+  }
+}
+
+.landing .bg::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  bottom: 85px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
+  background: linear-gradient(rgba(0, 0, 0, 0), black);
+  z-index: 0;
+}
+
+@media all and (min-width: 600px) {
+  .landing .bg::before {
+    bottom: 0;
+  }
+}
+
+.landing .hero {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  left: 20px;
+}
+
+@media all and (min-width: 600px) {
+  .landing .hero {
+    position: absolute;
+    left: 3vh;
+    bottom: 15vh;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .landing .hero {
+    left: 10vh;
+  }
+}
+/*# sourceMappingURL=landing.css.map */

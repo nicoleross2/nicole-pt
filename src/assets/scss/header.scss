@@ -1,0 +1,73 @@
+@import "vars.scss";
+
+.main-header {
+	z-index: 9999;
+	position: fixed;
+	width: 100vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px;
+	background-color: transparent;
+	color: color(white);
+	transition: background-color 400ms ease-in-out;
+
+	@include tablet {
+		padding: 14px;
+	}
+	@include desktop {
+		padding: 18px;
+	}
+
+	.title {
+		font-size: 24px;
+		line-height: 24px;
+
+		.subtitle {
+			font-size: 18px;
+
+			@include mobile {
+				display: block;
+			}
+		}
+	}
+
+	nav {
+		@include tablet {
+			.burger {
+				display: none;
+			}
+		}
+
+		@include mobile {
+			ul {
+				display: none !important;
+			}
+		}
+
+		ul {
+			display: flex;
+			justify-content: space-between;
+
+			li {
+				font-size: 19px;
+				font-weight: 300;
+				margin-right: 2vw;
+
+				@include desktop {
+					font-size: 24px;
+					margin-right: 65px;
+				}
+
+				a:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	// if window.scrollY > 0;
+	&.detached {
+		background-color: color(black);
+	}
+}

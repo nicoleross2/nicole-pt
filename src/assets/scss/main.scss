@@ -1,0 +1,238 @@
+@import "vars.scss";
+
+// ---------------------- Base ----------------------
+
+html {
+	background-color: color(white);
+	color: color(black);
+	/* prettier-ignore */
+	font-family: "Segoe UI", Roboto, Helvetica,	Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-weight: 400;
+	font-size: 18px;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+	overflow-x: hidden;
+}
+
+body {
+	overflow: hidden;
+}
+
+// ---------------------- Globals ----------------------
+
+.base {
+	color: color(black);
+	background-color: color(white);
+}
+
+.inverse {
+	color: color(white);
+	background-color: color(black);
+}
+
+.no-mobile {
+	@include mobile {
+		display: none !important;
+	}
+}
+
+.mobile-only {
+	@include tablet {
+		display: none !important;
+	}
+}
+
+// ---------------------- Section ---------------------
+
+section {
+	position: relative;
+
+	.container {
+		display: grid;
+		justify-items: center;
+
+		@include desktop {
+			width: $desktop;
+			margin: auto;
+		}
+	}
+}
+
+.base-theme {
+	.superscript {
+		color: color(grey-dark);
+	}
+	// background spanning between window edges and into neighbouring sections, remaining underneath the tilted backgrounds of .inverse-theme
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: -2;
+		display: block;
+		width: 100%;
+		height: 200%;
+		top: -50%;
+		background: color(white);
+	}
+}
+
+.inverse-theme {
+	position: relative;
+	background: transparent;
+	color: color(white);
+
+	.superscript {
+		color: color(grey-light);
+	}
+
+	// tilted background; overlayed elements not clipped
+	&:after {
+		content: "";
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 300%;
+		height: 200%;
+		transform-origin: 50% 0;
+		transform: translateX(-33.3%) rotate(14deg);
+		background: color(black);
+
+		@include tablet {
+			transform: translateX(-33.3%) rotate(8deg);
+		}
+	}
+}
+
+// ----------------- Headings & paragraph ------------------
+
+section {
+	--h1: 48px;
+	--h2: 36px;
+	--ssh1: 13px;
+	--ssh2: 9px;
+	--ssh1offset: -16px;
+	--ssh2offset: -10px;
+
+	@include tablet {
+		--h1: 60px;
+		--h2: 48px;
+		--ssh1: 18px;
+		--ssh2: 13px;
+		--ssh1offset: -20px;
+		--ssh2offset: -16px;
+	}
+	@include desktop {
+		--h1: 87px;
+		--h2: 60px;
+		--ssh1: 24px;
+		--ssh2: 18px;
+		--ssh1offset: -28px;
+		--ssh2offset: -20px;
+	}
+
+	h1,
+	h2 {
+		position: relative;
+		font-style: italic;
+		text-transform: uppercase;
+
+		.superscript {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	h1 {
+		font-size: var(--h1);
+
+		.superscript {
+			font-size: var(--ssh1);
+			transform: translate(var(--ssh1offset), -40%);
+		}
+	}
+
+	h2 {
+		font-size: var(--h2);
+
+		.superscript {
+			font-size: var(--ssh2);
+			transform: translate(var(--ssh2offset), -50%);
+		}
+	}
+
+	p {
+		font-size: 18px;
+		line-height: 26px;
+		margin: 26px 0;
+
+		&:first-child {
+			@include tablet {
+				text-indent: 3em;
+			}
+		}
+	}
+}
+
+// ---------------------- Button ---------------------
+
+.action {
+	justify-self: center;
+
+	a,
+	&[type="submit"] {
+		font-weight: 1000;
+		text-transform: uppercase;
+		font-size: 24px;
+		padding: 0 6px;
+	}
+}
+
+// ---------------------- Slogan ----------------------
+
+.slogan {
+	// client-side vars
+	--slogan-h1: 58px;
+	--slogan-h2: 32px;
+	--padding-h1: 0 8px 6px 8px;
+	--padding-h2: 0 4px 3px 4px;
+
+	@include tablet {
+		--slogan-h1: 58px;
+		--padding-h1: 0 8px 6px 8px;
+		--slogan-h2: var(--slogan-h1);
+		--padding-h2: var(--padding-h1);
+	}
+
+	@include desktop {
+		--slogan-h1: 76px;
+		--padding-h1: 0 12px 8px 12px;
+	}
+
+	h1,
+	h2 {
+		display: inline-block;
+		white-space: nowrap;
+		font-weight: 1000;
+		text-transform: uppercase;
+		font-style: normal;
+		box-shadow: 0 0 10px black;
+		margin-bottom: 10px;
+	}
+
+	h1 {
+		font-size: var(--slogan-h1);
+		line-height: var(--slogan-h1);
+		padding: var(--padding-h1);
+	}
+
+	h2 {
+		font-size: var(--slogan-h2);
+		line-height: var(--slogan-h2);
+		padding: var(--padding-h2);
+	}
+
+	.no-bg {
+		background-color: transparent;
+		box-shadow: none;
+		text-shadow: 0 0 10px black;
+	}
+}
