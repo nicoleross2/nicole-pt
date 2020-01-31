@@ -218,11 +218,14 @@
 				<h2 class="word">Free Consultation</h2>
 				</h2>
 			</div>
-			<form action="">
+			<form action="https://formsubmit.co/sebster.dev@gmail.com" method="POST">
 				<input name="name" type="text" autocomplete="name" placeholder="Your name" require>
 				<input name="phone" type="tel" autocomplete="tel" placeholder="Phone number" require>
 				<input name="email" type="email" autocomplete="email" placeholder="Email address" require>
 				<button type="submit" class="action inverse">Send</button>
+				<input type="hidden" name="_subject" value="Consultation request">
+				<input type="text" name="_honey" style="display:none">
+				<input type="hidden" name="_replyto">
 			</form>
 	</section><!-- END consultation -->
 
@@ -292,11 +295,14 @@
 			</header>
 
 			<div class="contact-form">
-				<form action="">
+				<form action="https://formsubmit.co/sebster.dev@gmail.com" method="POST">
 					<input name="name" type="text" autocomplete="name" placeholder="Name" require>
 					<input name="email" type="email" autocomplete="email" placeholder="Email" require>
 					<textarea name="message" rows="6" placeholder="Message"></textarea>
 					<button type="submit" class="action base">Send now</button>
+					<input type="hidden" name="_subject" value="Inquiry">
+					<input type="text" name="_honey" style="display:none">
+					<input type="hidden" name="_replyto">
 				</form>
 			</div>
 		</div>
