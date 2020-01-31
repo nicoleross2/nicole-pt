@@ -104,6 +104,12 @@ section {
 
 // ----------------- Headings & paragraph ------------------
 
+.title {
+	.word {
+		display: inline;
+	}
+}
+
 section {
 	--h1: 48px;
 	--h2: 36px;

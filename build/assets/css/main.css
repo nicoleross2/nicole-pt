@@ -99,6 +99,10 @@ section .container {
   }
 }
 
+.title .word {
+  display: inline;
+}
+
 section {
   --h1: 48px;
   --h2: 36px;
