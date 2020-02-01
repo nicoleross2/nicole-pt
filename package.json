@@ -1,0 +1,30 @@
+{
+	"name": "nicole-pt",
+	"version": "1.0.0",
+	"description": "brochure website",
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"watch": "node-sass scss/index.scss css/style.css --watch",
+		"compile-sass": "node-sass scss/index.scss css/style.comp.css",
+		"prefix-css": "postcss --use autoprefixer -b \"last 5 versions\" css/style.comp.css -o css/style.prefix.css",
+		"compress-css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+		"build": "npm-run-all compile-sass prefix-css compress-css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Sebsterio/nicole-pt.git"
+	},
+	"author": "Sebastian Rosloniec sebster.dev@gmail.com",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Sebsterio/nicole-pt/issues"
+	},
+	"homepage": "https://github.com/Sebsterio/nicole-pt#readme",
+	"devDependencies": {
+		"autoprefixer": "^9.7.4",
+		"node-sass": "^4.13.1",
+		"npm-run-all": "^4.1.5",
+		"postcss-cli": "^7.1.0"
+	}
+}

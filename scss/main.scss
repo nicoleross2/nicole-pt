@@ -1,0 +1,113 @@
+@import "abstracts";
+
+/* Contents:
+	* Doc (html, body)
+	* Globals (global modifiers, e.g. 'no-mobile')
+	* Fonts (sizes, mainly) 
+*/
+
+// ---------------------- Doc ----------------------
+
+html {
+	background-color: color(white);
+	color: color(black);
+	/* prettier-ignore */
+	font-family: "Segoe UI", Roboto, Helvetica,	Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-weight: 400;
+	font-size: 18px;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+	overflow-x: hidden;
+}
+
+body {
+	overflow: hidden;
+}
+
+// ---------------------- Globals ----------------------
+
+.base {
+	color: color(black);
+	background-color: color(white);
+}
+
+.inverse {
+	color: color(white);
+	background-color: color(black);
+}
+
+.no-mobile {
+	@include mobile {
+		display: none !important;
+	}
+}
+
+.mobile-only {
+	@include tablet {
+		display: none !important;
+	}
+}
+
+// ----------------- Fonts ------------------
+
+// :root bugs out in SCSS
+body {
+	--h1: 48px;
+	--h2: 36px;
+	--ssh1: 13px;
+	--ssh2: 9px;
+	--ssh1offset: -16px;
+	--ssh2offset: -10px;
+
+	@include tablet {
+		--h1: 60px;
+		--h2: 48px;
+		--ssh1: 18px;
+		--ssh2: 13px;
+		--ssh1offset: -20px;
+		--ssh2offset: -16px;
+	}
+	@include desktop {
+		--h1: 87px;
+		--h2: 60px;
+		--ssh1: 24px;
+		--ssh2: 18px;
+		--ssh1offset: -28px;
+		--ssh2offset: -20px;
+	}
+
+	h1,
+	h2 {
+		position: relative;
+		font-style: italic;
+		text-transform: uppercase;
+	}
+	h1 {
+		font-size: var(--h1);
+
+		.superscript {
+			font-size: var(--ssh1);
+			transform: translate(var(--ssh1offset), -40%);
+		}
+	}
+
+	h2 {
+		font-size: var(--h2);
+
+		.superscript {
+			font-size: var(--ssh2);
+			transform: translate(var(--ssh2offset), -50%);
+		}
+	}
+
+	p {
+		font-size: 18px;
+		line-height: 26px;
+		margin: 26px 0;
+
+		&:first-child {
+			@include tablet {
+				text-indent: 3em;
+			}
+		}
+	}
+}

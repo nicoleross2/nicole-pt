@@ -1,0 +1,119 @@
+@import "abstracts";
+
+.gallery {
+	.container {
+		padding: 50px 15px 0 15px;
+		grid-gap: 30px;
+
+		@include tablet {
+			justify-items: left;
+			padding: 50px 30px 0 30px;
+			grid-gap: 50px;
+		}
+
+		@include desktop {
+			padding: 50px 50px 0 50px;
+		}
+	}
+
+	.title {
+		text-align: center;
+
+		@include tablet {
+			transform: translateX(10vw);
+		}
+	}
+
+	.feed {
+		position: relative;
+		width: 100%;
+		height: 70vh;
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 80vw);
+		grid-auto-rows: 80vw 80vw;
+		justify-content: center;
+		grid-gap: 15px;
+
+		@include tablet {
+			grid-template-columns: repeat(auto-fill, 300px);
+			grid-auto-rows: 300px 300px;
+		}
+
+		// bottom edge fadeout
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 100%;
+			bottom: 0;
+			height: 100px;
+			background: linear-gradient(180deg, transparent, color(black));
+		}
+
+		&.open {
+			height: auto;
+
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	figure {
+		position: relative;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: all 400ms ease;
+		}
+
+		figcaption {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			display: grid;
+			justify-items: center;
+			align-items: center;
+			text-align: center;
+			background: rgba(0, 0, 0, 0.7);
+			opacity: 0;
+			transition: all 400ms ease;
+		}
+
+		&:hover {
+			img {
+				transform: scale(1.05);
+			}
+			figcaption {
+				opacity: 1;
+			}
+		}
+	}
+
+	.toggle-feed {
+		margin: auto;
+		text-transform: uppercase;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&.open {
+			.show-more {
+				display: none;
+			}
+		}
+
+		&:not(.open) {
+			.show-less {
+				display: none;
+			}
+		}
+	}
+}

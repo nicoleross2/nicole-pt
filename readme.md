@@ -4,9 +4,11 @@
 
 - section.consultation - superscript color (add .base class?)
 - body { display: grid }; adjust whitespace
+- fonts: logo, signature, gallery button
 - some JS and :hover effects
 - BEM ?
 
-- handle form submit
-- figure directory structure
-- host on Netlify or AWS
+* figure directory structure
+* host on Netlify or AWS
+  _ change form email address & auth
+  _ DNS

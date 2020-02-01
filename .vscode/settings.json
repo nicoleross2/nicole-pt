@@ -1,7 +1,7 @@
 {
 	"liveServer.settings.port": 5501,
 	"liveSassCompile.settings.includeItems": [
-		"/src/assets/scss"
+		"/scss"
 	],
 	"liveSassCompile.settings.excludeList": [
 		"**/node_modules/**",
@@ -11,12 +11,12 @@
 		{
 			"format": "expanded",
 			"extensionName": ".css",
-			"savePath": "/build/assets/css"
+			"savePath": "/build/css"
 		},
 		{
 			"extensionName": ".min.css",
 			"format": "compressed",
-			"savePath": "/dist/assets/css"
+			"savePath": "/dist/css"
 		}
 	],
 	"liveSassCompile.settings.generateMap": true,

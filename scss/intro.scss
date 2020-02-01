@@ -1,0 +1,84 @@
+@import "abstracts";
+
+.intro {
+	position: relative;
+	background: transparent;
+	color: color(white);
+
+	// tilted background
+	&:after {
+		top: unset;
+		bottom: 0;
+		transform-origin: 50% 100%;
+
+		@include tablet {
+			transform: translateX(-33.3%) rotate(-14deg);
+		}
+	}
+}
+
+.intro .container {
+	position: relative;
+	padding: 30px 15px;
+	grid-gap: 30px;
+	grid-template-areas: "pic" "text"; // == implicit
+
+	@include tablet {
+		padding: 25px;
+		grid-template-columns: 1fr auto;
+		grid-template-areas: "text pic";
+	}
+
+	@include desktop {
+		padding: 50px;
+		padding-bottom: 0;
+	}
+
+	.pic {
+		grid-area: pic;
+		width: 90vw;
+		height: 78vw;
+		margin: auto;
+		clip-path: polygon(0 0%, 100% 13%, 83% 89%, 17% 100%);
+		background: grey;
+		background-repeat: no-repeat;
+
+		// specific to individual image files
+		background: $image-profile;
+		background-size: 140%;
+		background-position: 65% 92%;
+
+		@include tablet {
+			width: 35vw;
+			height: 30vw;
+			min-width: 250px;
+			min-height: 220px;
+			max-width: 410px;
+			max-height: 340px;
+		}
+	}
+
+	.text {
+		grid-area: text;
+		display: grid;
+		grid-gap: 30px;
+
+		.title {
+			text-transform: initial;
+			font-weight: 300;
+
+			@include mobile {
+				font-size: 50px; // override
+			}
+		}
+		button {
+			justify-self: right;
+			margin: 15px 45px 0 0;
+
+			@include tablet {
+				justify-self: left;
+				margin: 20px 0 0 80px;
+			}
+		}
+	}
+}
