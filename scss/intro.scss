@@ -19,7 +19,7 @@
 
 .intro .container {
 	position: relative;
-	padding: 30px 15px;
+	padding: 30px 15px 50px 15px;
 	grid-gap: 30px;
 	grid-template-areas: "pic" "text"; // == implicit
 
@@ -44,9 +44,9 @@
 		background-repeat: no-repeat;
 
 		// specific to individual image files
-		background: $image-profile;
-		background-size: 140%;
-		background-position: 65% 92%;
+		background: $image-profile2;
+		background-size: 125%;
+		background-position: 70% 0;
 
 		@include tablet {
 			width: 35vw;

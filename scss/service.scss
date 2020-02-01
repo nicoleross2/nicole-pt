@@ -29,11 +29,6 @@
 		grid-area: title;
 		text-align: center;
 
-		.word {
-			@include tablet {
-				display: inline;
-			}
-		}
 		@include desktop {
 			transform: translateX(-9%);
 		}

@@ -22,9 +22,12 @@
 	.title {
 		font-size: 24px;
 		line-height: 24px;
+		font-weight: 600;
 
 		.subtitle {
 			font-size: 18px;
+			font-style: italic;
+			font-weight: 300;
 
 			@include mobile {
 				display: block;

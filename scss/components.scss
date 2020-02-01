@@ -2,6 +2,9 @@
 
 /* Contents:
 	* Section
+		* Title
+		* Container
+		* Section theme
 	* Button
 	* Slogan 
 */
@@ -12,6 +15,10 @@ section {
 	position: relative;
 
 	.title {
+		position: relative;
+		font-style: italic;
+		text-transform: uppercase;
+
 		.word {
 			display: inline;
 		}

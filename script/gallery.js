@@ -10,11 +10,22 @@ toggle.addEventListener("click", () => {
 
 // GET & render
 
-const fallbackImg = "https://imgpile.com/images/ItvXFr.jpg";
+// const fallbackPics = (function(length = 12) {
+// 	return Array.from({ length }, () => fallbackImgs[0]);
+// })();
 
-const fallbackPics = (function(length = 12) {
-	return Array.from({ length }, () => fallbackImg);
-})();
+const fallbackPics = [
+	"https://imgpile.com/images/ItvXFr.jpg",
+	"https://imgpile.com/images/1PvkEj.jpg",
+	"https://imgpile.com/images/1PvOXx.jpg",
+	"https://imgpile.com/images/1PvLDL.jpg",
+	"https://imgpile.com/images/1Pv2y1.jpg",
+	"https://imgpile.com/images/1PvqLP.jpg",
+	"https://imgpile.com/images/1PvoJW.jpg",
+	"https://imgpile.com/images/1PvH7N.jpg",
+	"https://imgpile.com/images/1PvVFc.jpg",
+	"https://imgpile.com/images/1Pv8fg.jpg"
+];
 
 function renderPics(pics) {
 	// avoid a gap at the bottom of the gallery

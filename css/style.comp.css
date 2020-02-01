@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
 *,
 *::before,
 *::after {
@@ -93,11 +94,6 @@ body {
       --ssh2: 18px;
       --ssh1offset: -28px;
       --ssh2offset: -20px; } }
-  body h1,
-  body h2 {
-    position: relative;
-    font-style: italic;
-    text-transform: uppercase; }
   body h1 {
     font-size: var(--h1); }
     body h1 .superscript {
@@ -118,17 +114,24 @@ body {
 
 /* Contents:
 	* Section
+		* Title
+		* Container
+		* Section theme
 	* Button
 	* Slogan 
 */
 section {
   position: relative; }
-  section .title .word {
-    display: inline; }
-  section .title .superscript {
-    position: absolute;
-    left: 0;
-    top: 0; }
+  section .title {
+    position: relative;
+    font-style: italic;
+    text-transform: uppercase; }
+    section .title .word {
+      display: inline; }
+    section .title .superscript {
+      position: absolute;
+      left: 0;
+      top: 0; }
   section .container {
     display: grid;
     justify-items: center; }
@@ -235,9 +238,12 @@ section {
       padding: 18px; } }
   .main-header .title {
     font-size: 24px;
-    line-height: 24px; }
+    line-height: 24px;
+    font-weight: 600; }
     .main-header .title .subtitle {
-      font-size: 18px; }
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 300; }
       @media all and (max-width: 600px) {
         .main-header .title .subtitle {
           display: block; } }
@@ -322,7 +328,7 @@ section {
 
 .intro .container {
   position: relative;
-  padding: 30px 15px;
+  padding: 30px 15px 50px 15px;
   grid-gap: 30px;
   grid-template-areas: "pic" "text"; }
   @media all and (min-width: 600px) {
@@ -342,9 +348,9 @@ section {
     clip-path: polygon(0 0%, 100% 13%, 83% 89%, 17% 100%);
     background: grey;
     background-repeat: no-repeat;
-    background: url("https://imgpile.com/images/ItvXFr.jpg");
-    background-size: 140%;
-    background-position: 65% 92%; }
+    background: url("https://imgpile.com/images/Ixrtuu.jpg");
+    background-size: 125%;
+    background-position: 70% 0; }
     @media all and (min-width: 600px) {
       .intro .container .pic {
         width: 35vw;
@@ -372,17 +378,17 @@ section {
           margin: 20px 0 0 80px; } }
 
 .programmes .container {
-  padding: 100px 15px 60px 15px;
+  padding: 50px 15px 60px 15px;
   text-align: center;
   grid-gap: 80px; }
   @media all and (min-width: 600px) {
     .programmes .container {
       padding: 100px 50px 80px 50px; } }
   @media all and (min-width: 600px) {
-    .programmes .container .title {
+    .programmes .container .section-title {
       transform: translateX(20%); } }
   @media all and (min-width: 1200px) {
-    .programmes .container .title {
+    .programmes .container .section-title {
       transform: translateX(40%); } }
 
 .programme {
@@ -446,9 +452,6 @@ section {
   .service .container .title {
     grid-area: title;
     text-align: center; }
-    @media all and (min-width: 600px) {
-      .service .container .title .word {
-        display: inline; } }
     @media all and (min-width: 1200px) {
       .service .container .title {
         transform: translateX(-9%); } }
@@ -517,8 +520,8 @@ section {
     @media all and (min-width: 1200px) {
       .consultation .container {
         width: 1200px; } }
-    .consultation .container .title .word {
-      display: inline; }
+    .consultation .container .superscript {
+      color: #7e7e7e; }
     .consultation .container form {
       width: 100%;
       display: grid;
@@ -569,17 +572,22 @@ section {
       grid-gap: 30px; } }
   .about .container .title {
     grid-area: title;
-    text-align-last: center; }
+    text-align: center; }
   .about .container .text {
     grid-area: text;
-    z-index: 999; }
+    z-index: 999;
+    padding-top: 15px; }
     .about .container .text .signature {
+      font-family: "Homemade Apple", cursive;
       font-style: italic;
       font-weight: 300;
       font-size: 29px;
       text-shadow: none;
       text-align-last: right;
-      margin-right: 10vw; }
+      margin-right: 5vw; }
+      @media all and (min-width: 950px) {
+        .about .container .text .signature {
+          padding-top: 50px; } }
   .about .container .pic {
     grid-area: text;
     width: 90vw;
@@ -589,7 +597,7 @@ section {
     background: grey;
     background: url("https://imgpile.com/images/ItvXFr.jpg");
     background-size: cover;
-    background-position: 60% 100%;
+    background-position: 70% 50%;
     background-repeat: no-repeat;
     filter: blur(1px) opacity(40%); }
     @media all and (min-width: 600px) {
@@ -598,6 +606,9 @@ section {
         height: 50vw; } }
     @media all and (min-width: 950px) {
       .about .container .pic {
+        background: url("https://imgpile.com/images/IxrDBi.jpg");
+        background-position: 70% 50%;
+        background-size: cover;
         grid-area: pic;
         filter: none;
         width: 30vw;
@@ -628,7 +639,7 @@ section {
 .gallery .feed {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 700px;
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(auto-fill, 80vw);
