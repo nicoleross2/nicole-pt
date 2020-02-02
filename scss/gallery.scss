@@ -1,6 +1,9 @@
 @import "abstracts";
 
 .gallery {
+	// tilted bg is too narrow for expanded gallery view
+	background: linear-gradient(180deg, transparent 20%, color(black) 20%);
+
 	.container {
 		padding: 50px 15px 0 15px;
 		grid-gap: 30px;
@@ -20,7 +23,10 @@
 		text-align: center;
 
 		@include tablet {
-			transform: translateX(10vw);
+			margin-left: 30px;
+		}
+		@include desktop {
+			margin-left: 0;
 		}
 	}
 
@@ -72,6 +78,7 @@
 		}
 
 		figcaption {
+			padding: 30px;
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -81,7 +88,9 @@
 			justify-items: center;
 			align-items: center;
 			text-align: center;
+			line-height: 32px;
 			background: rgba(0, 0, 0, 0.7);
+			text-shadow: 0 2px 2px black;
 			opacity: 0;
 			transition: all 400ms ease;
 		}

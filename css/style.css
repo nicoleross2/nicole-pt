@@ -618,86 +618,90 @@ section {
         width: 350px;
         height: 580px; } }
 
-.gallery .container {
-  padding: 50px 15px 0 15px;
-  grid-gap: 30px; }
-  @media all and (min-width: 600px) {
-    .gallery .container {
-      justify-items: left;
-      padding: 50px 30px 0 30px;
-      grid-gap: 50px; } }
-  @media all and (min-width: 1200px) {
-    .gallery .container {
-      padding: 50px 50px 0 50px; } }
-
-.gallery .title {
-  text-align: center; }
-  @media all and (min-width: 600px) {
-    .gallery .title {
-      transform: translateX(10vw); } }
-
-.gallery .feed {
-  position: relative;
-  width: 100%;
-  height: 700px;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 80vw);
-  grid-auto-rows: 80vw 80vw;
-  justify-content: center;
-  grid-gap: 15px; }
-  @media all and (min-width: 600px) {
-    .gallery .feed {
-      grid-template-columns: repeat(auto-fill, 300px);
-      grid-auto-rows: 300px 300px; } }
-  .gallery .feed:after {
-    content: "";
-    position: absolute;
-    left: 0;
+.gallery {
+  background: linear-gradient(180deg, transparent 20%, black 20%); }
+  .gallery .container {
+    padding: 50px 15px 0 15px;
+    grid-gap: 30px; }
+    @media all and (min-width: 600px) {
+      .gallery .container {
+        justify-items: left;
+        padding: 50px 30px 0 30px;
+        grid-gap: 50px; } }
+    @media all and (min-width: 1200px) {
+      .gallery .container {
+        padding: 50px 50px 0 50px; } }
+  .gallery .title {
+    text-align: center; }
+    @media all and (min-width: 600px) {
+      .gallery .title {
+        margin-left: 30px; } }
+    @media all and (min-width: 1200px) {
+      .gallery .title {
+        margin-left: 0; } }
+  .gallery .feed {
+    position: relative;
     width: 100%;
-    bottom: 0;
-    height: 100px;
-    background: linear-gradient(180deg, transparent, black); }
-  .gallery .feed.open {
-    height: auto; }
-    .gallery .feed.open:after {
-      display: none; }
-
-.gallery figure {
-  position: relative;
-  overflow: hidden; }
-  .gallery figure img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 400ms ease; }
-  .gallery figure figcaption {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    height: 700px;
+    overflow: hidden;
     display: grid;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.7);
-    opacity: 0;
-    transition: all 400ms ease; }
-  .gallery figure:hover img {
-    transform: scale(1.05); }
-  .gallery figure:hover figcaption {
-    opacity: 1; }
-
-.gallery .toggle-feed {
-  margin: auto;
-  text-transform: uppercase; }
-  .gallery .toggle-feed:hover {
-    text-decoration: underline; }
-  .gallery .toggle-feed.open .show-more {
-    display: none; }
-  .gallery .toggle-feed:not(.open) .show-less {
-    display: none; }
+    grid-template-columns: repeat(auto-fill, 80vw);
+    grid-auto-rows: 80vw 80vw;
+    justify-content: center;
+    grid-gap: 15px; }
+    @media all and (min-width: 600px) {
+      .gallery .feed {
+        grid-template-columns: repeat(auto-fill, 300px);
+        grid-auto-rows: 300px 300px; } }
+    .gallery .feed:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      bottom: 0;
+      height: 100px;
+      background: linear-gradient(180deg, transparent, black); }
+    .gallery .feed.open {
+      height: auto; }
+      .gallery .feed.open:after {
+        display: none; }
+  .gallery figure {
+    position: relative;
+    overflow: hidden; }
+    .gallery figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 400ms ease; }
+    .gallery figure figcaption {
+      padding: 30px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+      line-height: 32px;
+      background: rgba(0, 0, 0, 0.7);
+      text-shadow: 0 2px 2px black;
+      opacity: 0;
+      transition: all 400ms ease; }
+    .gallery figure:hover img {
+      transform: scale(1.05); }
+    .gallery figure:hover figcaption {
+      opacity: 1; }
+  .gallery .toggle-feed {
+    margin: auto;
+    text-transform: uppercase; }
+    .gallery .toggle-feed:hover {
+      text-decoration: underline; }
+    .gallery .toggle-feed.open .show-more {
+      display: none; }
+    .gallery .toggle-feed:not(.open) .show-less {
+      display: none; }
 
 .contact {
   width: 100%;

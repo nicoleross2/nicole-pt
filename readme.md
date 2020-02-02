@@ -4,9 +4,8 @@ www.nicoleross.fitness
 
 ## TODO
 
-- fix form-2 bg color when not empty
+- formsubmit: email alias
 
-- formsubmit: link to Nicole's email addr
 - auth Instagram
 
   - if fails, try from Nicole's IG profile
