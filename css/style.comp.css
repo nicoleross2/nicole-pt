@@ -39,8 +39,8 @@ input::-moz-focus-inner {
 
 /* Contents:
 	* Doc (html, body)
-	* Globals (global modifiers, e.g. 'no-mobile')
-	* Fonts (sizes, mainly) 
+	* Global modifiers (e.g. 'no-mobile')
+	* Font sizes
 */
 html {
   background-color: white;
@@ -127,7 +127,8 @@ section {
     font-style: italic;
     text-transform: uppercase; }
     section .title .word {
-      display: inline; }
+      display: inline;
+      position: relative; }
     section .title .superscript {
       position: absolute;
       left: 0;
@@ -248,26 +249,57 @@ section {
         .main-header .title .subtitle {
           display: block; } }
   @media all and (min-width: 600px) {
-    .main-header nav .burger {
+    .main-header .nav-toggle {
       display: none; } }
-  @media all and (max-width: 600px) {
-    .main-header nav ul {
-      display: none !important; } }
-  .main-header nav ul {
-    display: flex;
-    justify-content: space-between; }
-    .main-header nav ul li {
-      font-size: 19px;
-      font-weight: 300;
-      margin-right: 2vw; }
-      @media all and (min-width: 1200px) {
-        .main-header nav ul li {
-          font-size: 24px;
-          margin-right: 65px; } }
-      .main-header nav ul li a:hover {
-        text-decoration: underline; }
+  .main-header .nav-toggle:focus {
+    outline: none; }
+  .main-header .nav-toggle:active {
+    transform: scale(1.1); }
   .main-header.detached {
     background-color: black; }
+
+@media all and (max-width: 600px) {
+  nav {
+    display: none; } }
+
+nav ul {
+  display: flex;
+  justify-content: space-between; }
+  nav ul li {
+    font-size: 19px;
+    font-weight: 300;
+    margin-right: 2vw; }
+    @media all and (min-width: 1200px) {
+      nav ul li {
+        font-size: 24px;
+        margin-right: 65px; } }
+    nav ul li a:hover {
+      text-decoration: underline; }
+
+html.expanded {
+  overflow: hidden; }
+  html.expanded .main-header {
+    transition: none;
+    background-color: black;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    align-items: stretch;
+    justify-items: stretch; }
+    html.expanded .main-header nav {
+      display: initial;
+      grid-column: 1 / -1; }
+      html.expanded .main-header nav ul {
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center; }
+        html.expanded .main-header nav ul li {
+          flex: 1 1 0;
+          font-size: 48px;
+          max-height: 100px; }
 
 .landing .bg {
   height: 70vh;
