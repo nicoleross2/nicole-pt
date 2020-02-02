@@ -2,8 +2,8 @@
 
 /* Contents:
 	* Doc (html, body)
-	* Globals (global modifiers, e.g. 'no-mobile')
-	* Fonts (sizes, mainly) 
+	* Global modifiers (e.g. 'no-mobile')
+	* Font sizes
 */
 
 // ---------------------- Doc ----------------------
@@ -23,7 +23,7 @@ body {
 	overflow: hidden;
 }
 
-// ---------------------- Globals ----------------------
+// ----------------- Global modifiers ------------------
 
 .base {
 	color: color(black);
@@ -47,7 +47,7 @@ body {
 	}
 }
 
-// ----------------- Fonts ------------------
+// ----------------- Font sizes ------------------
 
 // :root bugs out in SCSS
 body {

@@ -1,11 +1,11 @@
 const feed = document.querySelector("#ig-feed");
-const toggle = document.querySelector("#toggle-feed");
+const galleryToggle = document.querySelector("#toggle-feed");
 
 // Expand/collapse gallery
 
-toggle.addEventListener("click", () => {
+galleryToggle.addEventListener("click", () => {
 	feed.classList.toggle("open");
-	toggle.classList.toggle("open");
+	galleryToggle.classList.toggle("open");
 });
 
 // GET & render
