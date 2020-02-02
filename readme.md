@@ -4,7 +4,6 @@ www.nicoleross.fitness
 
 ## TODO
 
-- mobile menu
 - add favicon
 - add transformations pics
 
