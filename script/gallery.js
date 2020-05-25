@@ -24,7 +24,7 @@ const fallbackPics = [
 	"https://imgpile.com/images/1PvoJW.jpg",
 	"https://imgpile.com/images/1PvH7N.jpg",
 	"https://imgpile.com/images/1PvVFc.jpg",
-	"https://imgpile.com/images/1Pv8fg.jpg"
+	"https://imgpile.com/images/1Pv8fg.jpg",
 ];
 
 function renderPics(pics) {
@@ -33,9 +33,9 @@ function renderPics(pics) {
 
 	feed.innerHTML = pics
 		.map(
-			item => `
+			(item) => `
 			<figure class="figure">
-				<img src="${item.media_url || item}" />	
+				<img src="${item.media_url || item}" alt="Instagram image/>	
 				<figcaption class="caption">
 					${item.caption || "Error: connection with Instagram failed"}
 					</figcaption>
@@ -49,11 +49,11 @@ function renderPics(pics) {
 fetch(
 	"https://graph.instagram.com/me/media?fields=caption,id,media_type,media_url,permalink,thumbnail_url,timestamp,username&access_token=IGQVJWaEZABSXhLTnpLVnZA3NnBxekpPYmpLQWFTZA0hkN01QZA1RXMC1iWmV2OFhqYUpxNlRvWkE5ZA3Bka2ZAPN3NhMTcwQ2FRcG5sOGJ0bEEzMHRhU09GbG1BaHJuV20zNF8xc0RPZAXFR"
 )
-	.then(function(response) {
+	.then(function (response) {
 		if (response.status === 200)
-			response.json().then(data => renderPics(data.data));
+			response.json().then((data) => renderPics(data.data));
 		else renderPics(fallbackPics);
 	})
-	.catch(function(err) {
+	.catch(function (err) {
 		console.log("Fetch Error :-S", err);
 	});

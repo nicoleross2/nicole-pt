@@ -142,7 +142,7 @@ section {
         margin: auto; } }
 
 .base-theme .superscript {
-  color: #7e7e7e; }
+  color: #6f6f6f; }
 
 .base-theme:after {
   content: "";
@@ -553,7 +553,7 @@ html.expanded {
       .consultation .container {
         width: 1200px; } }
     .consultation .container .superscript {
-      color: #7e7e7e; }
+      color: #6f6f6f; }
     .consultation .container form {
       width: 100%;
       display: grid;
