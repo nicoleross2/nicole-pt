@@ -27,23 +27,37 @@ const fallbackPics = [
 	"https://imgpile.com/images/1Pv8fg.jpg",
 ];
 
+// Download hq image and run callback when done
+function preloadImage(url, imageLoadedCallback /*, imgErrorCallback */) {
+	var img = new Image();
+	img.src = url;
+	img.onload = imageLoadedCallback;
+	// img.onerror = imgErrorCallback;
+}
+
+function insertImage(url, caption) {
+	const imageHtml = `
+	<figure class="figure">
+		<img src="${url}" alt="Instagram image/>	
+		<figcaption class="caption">
+			${caption || "Error: connection with Instagram failed"}
+			</figcaption>
+		</figure>
+		`;
+	feed.innerHTML += imageHtml;
+}
+
 function renderPics(pics) {
 	// avoid a gap at the bottom of the gallery
 	pics.length = pics.length - (pics.length % 3);
 
-	feed.innerHTML = pics
-		.map(
-			(item) => `
-			<figure class="figure">
-				<img src="${item.media_url || item}" alt="Instagram image/>	
-				<figcaption class="caption">
-					${item.caption || "Error: connection with Instagram failed"}
-					</figcaption>
-				</figure>
-				`
-			//<a href="${item.permalink || item}">IG</a>
-		)
-		.join("");
+	pics.forEach((pic) => {
+		const url = pic.media_url || pic;
+		const caption = pic.caption;
+		preloadImage(url, () => {
+			insertImage(url, caption);
+		});
+	});
 }
 
 fetch(
