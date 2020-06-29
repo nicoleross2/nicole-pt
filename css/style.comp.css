@@ -1,4 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
 *,
 *::before,
 *::after {
@@ -46,7 +71,7 @@ html {
   background-color: #fff;
   color: #070707;
   /* prettier-ignore */
-  font-family: "Segoe UI", Roboto, Helvetica,	Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Segoe UI", 'Open Sans', Roboto, Helvetica,	Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 400;
   font-size: 18px;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
@@ -106,7 +131,7 @@ body {
       transform: translate(var(--ssh2offset), -50%); }
   body p {
     font-size: 18px;
-    line-height: 26px;
+    line-height: 28px;
     margin: 26px 0; }
     @media all and (min-width: 600px) {
       body p:first-child {
@@ -178,7 +203,7 @@ section {
 .action {
   justify-self: center; }
   .action a, .action[type="submit"] {
-    font-weight: 1000;
+    font-weight: 800;
     text-transform: uppercase;
     font-size: 24px;
     padding: 0 6px; }
@@ -202,7 +227,7 @@ section {
   .slogan h2 {
     display: inline-block;
     white-space: nowrap;
-    font-weight: 1000;
+    font-weight: 800;
     text-transform: uppercase;
     font-style: normal;
     box-shadow: 0 0 10px black;
@@ -394,7 +419,7 @@ html.expanded {
   .intro .container .text {
     grid-area: text;
     display: grid;
-    grid-gap: 30px; }
+    grid-gap: 25px; }
     .intro .container .text .title {
       text-transform: initial;
       font-weight: 300; }
@@ -407,7 +432,7 @@ html.expanded {
       @media all and (min-width: 600px) {
         .intro .container .text button {
           justify-self: left;
-          margin: 20px 0 0 80px; } }
+          margin: 15px 0 0 80px; } }
 
 .programmes .container {
   padding: 50px 15px 60px 15px;
@@ -619,7 +644,8 @@ html.expanded {
       margin-right: 5vw; }
       @media all and (min-width: 950px) {
         .about .container .text .signature {
-          padding-top: 50px; } }
+          padding-top: 30px;
+          margin-bottom: -20px; } }
   .about .container .pic {
     grid-area: text;
     width: 90vw;
