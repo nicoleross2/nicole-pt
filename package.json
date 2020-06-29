@@ -20,7 +20,7 @@
 	"bugs": {
 		"url": "https://github.com/Sebsterio/nicole-pt/issues"
 	},
-	"homepage": "https://github.com/Sebsterio/nicole-pt#readme",
+	"homepage": "https://nicoleross.fitness/",
 	"devDependencies": {
 		"autoprefixer": "^9.7.4",
 		"node-sass": "^4.13.1",
