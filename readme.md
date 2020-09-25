@@ -7,9 +7,13 @@ www.nicoleross.fitness
 - add transformations pics
 - automate refreshing Instagram OAuth Token
 
-# Development
+# How to use
 
 ```
-npm run watch    # watch CSS; use in conjunctio with VSCode Live Server
-npm run build    # production build
+# Development
+npm run watch    # watch CSS; use in conjunction with VSCode Live Server
+
+# Deploy
+npm run build
+git push origin
 ```

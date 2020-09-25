@@ -54,7 +54,7 @@ body {
 	--h1: 48px;
 	--h2: 36px;
 	--ssh1: 13px;
-	--ssh2: 9px;
+	--ssh2: 11px;
 	--ssh1offset: -16px;
 	--ssh2offset: -10px;
 
@@ -80,7 +80,7 @@ body {
 
 		.superscript {
 			font-size: var(--ssh1);
-			transform: translate(var(--ssh1offset), -40%);
+			transform: translate(var(--ssh1offset), -50%);
 		}
 	}
 
@@ -89,7 +89,7 @@ body {
 
 		.superscript {
 			font-size: var(--ssh2);
-			transform: translate(var(--ssh2offset), -50%);
+			transform: translate(var(--ssh2offset), -70%);
 		}
 	}
 
