@@ -61,7 +61,7 @@ function renderPics(pics) {
 }
 
 fetch(
-	"https://graph.instagram.com/me/media?fields=caption,id,media_type,media_url,permalink,thumbnail_url,timestamp,username&access_token=IGQVJVYXZAhdWhCdmRzZAnZAEb2k4UXdob0YwMlVRd0Fqb3ZAQWElOdnFqN0hDTWcwSkp0NDdMU09Vb2RIbU5TUkhxUU1BYUxuTFpCTG12TlpsQWtGcjQ1STI2WkdFRlByRURMVHhkX0FB"
+	"https://graph.instagram.com/me/media?fields=caption,id,media_type,media_url,permalink,thumbnail_url,timestamp,username&access_token=IGQVJVRXBtSTJPTEVOakY1WngyZA2hpN1FRTWRHcFVGS2plc19GYlc2NHk1cFNUVTBYdUtjU1BnNHQ4WW9vcjUyYW14eUNJeGlNaEc3VVRmTEl0MzFCUWFmOUJ1a0MtT1NObHVualhB"
 )
 	.then(function (response) {
 		if (response.status === 200)
