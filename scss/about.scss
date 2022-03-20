@@ -61,9 +61,9 @@
 			margin: auto;
 			clip-path: polygon(0 0%, 100% 13%, 83% 89%, 17% 100%);
 			background: grey;
-			background: $image-selfie;
-			background-size: cover;
+			background: url("https://imgpile.com/images/ItvXFr.jpg");
 			background-position: 70% 50%;
+			background-size: cover;
 			background-repeat: no-repeat;
 
 			filter: blur(1px) opacity(40%);
@@ -74,9 +74,11 @@
 			}
 
 			@include laptop {
-				background: $image-profile1;
-				background-position: 70% 50%;
-				background-size: cover; // must be repeated
+				// background: url("https://imgpile.com/images/IxrDBi.jpg");
+				// background-position: 70% 50%;
+				background: url("https://imgpile.com/images/5hn73X.jpg");
+				background-position: 50% 0%;
+				background-size: cover;
 				grid-area: pic;
 				filter: none;
 				width: 30vw;

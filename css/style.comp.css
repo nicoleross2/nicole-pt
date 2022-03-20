@@ -405,9 +405,9 @@ html.expanded {
     clip-path: polygon(0 0%, 100% 13%, 83% 89%, 17% 100%);
     background: grey;
     background-repeat: no-repeat;
-    background: url("https://imgpile.com/images/Ixrtuu.jpg");
-    background-size: 125%;
-    background-position: 70% 0; }
+    background: url("https://imgpile.com/images/5hnU5h.jpg");
+    background-size: 90%;
+    background-position: 50% 0; }
     @media all and (min-width: 600px) {
       .intro .container .pic {
         width: 35vw;
@@ -654,8 +654,8 @@ html.expanded {
     clip-path: polygon(0 0%, 100% 13%, 83% 89%, 17% 100%);
     background: grey;
     background: url("https://imgpile.com/images/ItvXFr.jpg");
-    background-size: cover;
     background-position: 70% 50%;
+    background-size: cover;
     background-repeat: no-repeat;
     filter: blur(1px) opacity(40%); }
     @media all and (min-width: 600px) {
@@ -664,8 +664,8 @@ html.expanded {
         height: 50vw; } }
     @media all and (min-width: 950px) {
       .about .container .pic {
-        background: url("https://imgpile.com/images/IxrDBi.jpg");
-        background-position: 70% 50%;
+        background: url("https://imgpile.com/images/5hn73X.jpg");
+        background-position: 50% 0%;
         background-size: cover;
         grid-area: pic;
         filter: none;

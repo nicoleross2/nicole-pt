@@ -44,9 +44,12 @@
 		background-repeat: no-repeat;
 
 		// specific to individual image files
-		background: $image-profile2;
-		background-size: 125%;
-		background-position: 70% 0;
+		// background: url("https://imgpile.com/images/Ixrtuu.jpg");
+		// background-size: 125%;
+		// background-position: 70% 0;
+		background: url("https://imgpile.com/images/5hnU5h.jpg");
+		background-size: 90%;
+		background-position: 50% 0;
 
 		@include tablet {
 			width: 35vw;
